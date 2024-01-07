@@ -1,17 +1,16 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+"""Import Blueprint from flask doc."""
 
-from flask import blueprint
+from flask import Blueprint
 
-app_views = blueprint('app_views', __name__, url_prefix='/api/v1')
+app_views = Blueprint('app_views', __name__, url_prefix='/api/v1')
 
-if __name__ == "__main__":
-  from api.v1.views.index import *
-  from api.v1.views.states import *
-  from api.v1.views.cities import *
-  from api.v1.views.amenities import *
-  from api.v1.views.users import *
-  from api.v1.views.places import *
-  from api.v1.views.places_reviews import *
-  from api.v1.views.places_amenities import *
-  from api.v1.views.places_search import *
-  
+if __name__ == "__init__":
+    from api.v1.views import index
+    from api.v1.views import states
+    from api.v1.views import cities
+    from api.v1.views import amenities
+    from api.v1.views import users
+    from api.v1.views import places
+    from api.v1.views import places_reviews
+    from api.v1.views import places_amenities
