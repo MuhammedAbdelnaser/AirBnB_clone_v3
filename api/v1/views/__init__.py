@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+from flask import blueprint
+
+app_views = blueprint('app_views', __name__, url_prefix='/api/v1')
+
+if __name__ == "__main__":
+  from api.v1.views.index import *
+  from api.v1.views.states import *
+  from api.v1.views.cities import *
+  from api.v1.views.amenities import *
+  from api.v1.views.users import *
+  from api.v1.views.places import *
+  from api.v1.views.places_reviews import *
+  from api.v1.views.places_amenities import *
+  from api.v1.views.places_search import *
+  
